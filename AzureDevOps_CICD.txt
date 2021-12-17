@@ -1,0 +1,10 @@
+https://medium.com/geekculture/ci-cd-on-azure-databricks-using-azure-devops-82441386c6e8   ***
+
+https://medium.com/@bedatse/azure-devops-ci-cd-with-azure-databricks-and-data-factory-part-1-c05a44536a8e
+
+https://www.padok.fr/en/blog/ci/cd-pipeline-databricks-azure-devops
+
+https://www.thedataguy.blog/ci-cd-with-databricks-and-azure-devops/
+
+https://dev.azure.com/thiam-huattan/_git/LearnCICD
+
