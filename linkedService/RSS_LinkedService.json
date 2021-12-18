@@ -1,0 +1,13 @@
+{
+	"name": "RSS_LinkedService",
+	"properties": {
+		"description": "Linked Service for RSS Feed for Fuel Watch Data",
+		"annotations": [],
+		"type": "HttpServer",
+		"typeProperties": {
+			"url": "https://www.fuelwatch.wa.gov.au/fuelwatch/fuelWatchRSS?",
+			"enableServerCertificateValidation": false,
+			"authenticationType": "Anonymous"
+		}
+	}
+}
