@@ -1,0 +1,21 @@
+{
+	"name": "Parquet1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "StorageAccount_LinkedService",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "FuelWatch",
+				"folderPath": "Raw",
+				"container": "datalakestore"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": []
+	}
+}
