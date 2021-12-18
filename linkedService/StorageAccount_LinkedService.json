@@ -1,0 +1,11 @@
+{
+	"name": "StorageAccount_LinkedService",
+	"properties": {
+		"annotations": [],
+		"type": "AzureBlobStorage",
+		"typeProperties": {
+			"serviceEndpoint": "https://mysampledwstoragegen2.blob.core.windows.net",
+			"accountKind": "StorageV2"
+		}
+	}
+}
