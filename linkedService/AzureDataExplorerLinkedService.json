@@ -1,0 +1,11 @@
+{
+	"name": "AzureDataExplorerLinkedService",
+	"properties": {
+		"annotations": [],
+		"type": "AzureDataExplorer",
+		"typeProperties": {
+			"endpoint": "https://thiamhuatadxcluster.southeastasia.kusto.windows.net",
+			"database": "Wuhan_DB"
+		}
+	}
+}
