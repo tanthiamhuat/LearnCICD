@@ -1,0 +1,12 @@
+{
+	"name": "AzureDataExplorerTable",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureDataExplorer",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureDataExplorerTable",
+		"schema": []
+	}
+}
