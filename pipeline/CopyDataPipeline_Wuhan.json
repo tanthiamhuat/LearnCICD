@@ -171,7 +171,6 @@
 							{
 								"source": {
 									"name": "2#HotAir_Zone_1_temperature",
-									"type": "String",
 									"physicalType": "varchar"
 								},
 								"sink": {
