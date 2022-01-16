@@ -1,0 +1,24 @@
+{
+	"name": "Trigger_goo",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Stopped",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "CopyPipeline_Wuhan",
+					"type": "PipelineReference"
+				}
+			}
+		],
+		"type": "ScheduleTrigger",
+		"typeProperties": {
+			"recurrence": {
+				"frequency": "Minute",
+				"interval": 5,
+				"startTime": "2022-01-16T07:29:00Z",
+				"timeZone": "UTC"
+			}
+		}
+	}
+}
