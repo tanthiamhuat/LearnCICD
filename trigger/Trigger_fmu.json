@@ -1,0 +1,24 @@
+{
+	"name": "Trigger_fmu",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Stopped",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "CopyDataPipeline_Wuhan",
+					"type": "PipelineReference"
+				}
+			}
+		],
+		"type": "ScheduleTrigger",
+		"typeProperties": {
+			"recurrence": {
+				"frequency": "Hour",
+				"interval": 24,
+				"startTime": "2022-01-16T08:02:00Z",
+				"timeZone": "UTC"
+			}
+		}
+	}
+}
