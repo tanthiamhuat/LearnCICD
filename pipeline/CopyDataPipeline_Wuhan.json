@@ -3,7 +3,7 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "Copy_fmu",
+				"name": "CopyData_WuhanCombined",
 				"type": "Copy",
 				"dependsOn": [],
 				"policy": {
