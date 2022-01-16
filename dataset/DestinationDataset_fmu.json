@@ -1,0 +1,1036 @@
+{
+	"name": "DestinationDataset_fmu",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureDataExplorerLinkedService",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureDataExplorerTable",
+		"schema": [
+			{
+				"name": "catepillar_belt_speed",
+				"type": "string"
+			},
+			{
+				"name": "catepillar_distance_between_belts",
+				"type": "string"
+			},
+			{
+				"name": "catepillar_set_point_local",
+				"type": "string"
+			},
+			{
+				"name": "HotAir_Zone_5_temperature",
+				"type": "string"
+			},
+			{
+				"name": "HotAir_Zone_6_temperature",
+				"type": "string"
+			},
+			{
+				"name": "HotAir_Zon1_1_temperature",
+				"type": "string"
+			},
+			{
+				"name": "HotAir_Zon1_2_temperature",
+				"type": "string"
+			},
+			{
+				"name": "HotAir_Zon1_3_temperature",
+				"type": "string"
+			},
+			{
+				"name": "HotAir_Zon1_4_temperature",
+				"type": "string"
+			},
+			{
+				"name": "catepillar_motor_charge",
+				"type": "string"
+			},
+			{
+				"name": "HotAir_Zone_1_temperature",
+				"type": "string"
+			},
+			{
+				"name": "HotAir_Zone_2_temperature",
+				"type": "string"
+			},
+			{
+				"name": "HotAir_Zone_3_temperature",
+				"type": "string"
+			},
+			{
+				"name": "HotAir_Zone_4_temperature",
+				"type": "string"
+			},
+			{
+				"name": "Timestamp",
+				"type": "long"
+			},
+			{
+				"name": "ex1_head_pressure",
+				"type": "string"
+			},
+			{
+				"name": "ex1_head_temp",
+				"type": "string"
+			},
+			{
+				"name": "ex1_melt_temp",
+				"type": "string"
+			},
+			{
+				"name": "ex1_recipe_name",
+				"type": "string"
+			},
+			{
+				"name": "ex1_recipe_no",
+				"type": "string"
+			},
+			{
+				"name": "ex1_roll_torque",
+				"type": "string"
+			},
+			{
+				"name": "ex1_RunningRecipe",
+				"type": "string"
+			},
+			{
+				"name": "ex1_screw_current",
+				"type": "string"
+			},
+			{
+				"name": "ex1_screw_speed",
+				"type": "string"
+			},
+			{
+				"name": "ex1_screw_temp",
+				"type": "string"
+			},
+			{
+				"name": "ex1_zone_1_temp",
+				"type": "string"
+			},
+			{
+				"name": "ex1_zone_2_temp",
+				"type": "string"
+			},
+			{
+				"name": "ex1_zone_3_temp",
+				"type": "string"
+			},
+			{
+				"name": "ex2_head_pressure",
+				"type": "string"
+			},
+			{
+				"name": "ex2_head_temp",
+				"type": "string"
+			},
+			{
+				"name": "ex2_melt_temp",
+				"type": "string"
+			},
+			{
+				"name": "ex2_recipe_name",
+				"type": "string"
+			},
+			{
+				"name": "ex2_recipe_no",
+				"type": "string"
+			},
+			{
+				"name": "ex2_roll_torque",
+				"type": "string"
+			},
+			{
+				"name": "ex2_RunningRecipe",
+				"type": "string"
+			},
+			{
+				"name": "ex2_screw_current",
+				"type": "string"
+			},
+			{
+				"name": "ex2_screw_speed",
+				"type": "string"
+			},
+			{
+				"name": "ex2_screw_temp",
+				"type": "string"
+			},
+			{
+				"name": "ex2_zone_1_temp",
+				"type": "string"
+			},
+			{
+				"name": "ex2_zone_2_temp",
+				"type": "string"
+			},
+			{
+				"name": "ex3_head_pressure",
+				"type": "string"
+			},
+			{
+				"name": "ex3_head_temp",
+				"type": "string"
+			},
+			{
+				"name": "ex3_melt_temp",
+				"type": "string"
+			},
+			{
+				"name": "ex3_recipe_name",
+				"type": "string"
+			},
+			{
+				"name": "ex3_recipe_no",
+				"type": "string"
+			},
+			{
+				"name": "ex3_roll_torque",
+				"type": "string"
+			},
+			{
+				"name": "ex3_RunningRecipe",
+				"type": "string"
+			},
+			{
+				"name": "ex3_screw_current",
+				"type": "string"
+			},
+			{
+				"name": "ex3_screw_speed",
+				"type": "string"
+			},
+			{
+				"name": "ex3_screw_temp",
+				"type": "string"
+			},
+			{
+				"name": "ex3_zone_1_temp",
+				"type": "string"
+			},
+			{
+				"name": "ex3_zone_2_temp",
+				"type": "string"
+			},
+			{
+				"name": "ex4_head_pressure",
+				"type": "string"
+			},
+			{
+				"name": "ex4_head_temp",
+				"type": "string"
+			},
+			{
+				"name": "ex4_melt_temp",
+				"type": "string"
+			},
+			{
+				"name": "ex4_recipe_name",
+				"type": "string"
+			},
+			{
+				"name": "ex4_recipe_no",
+				"type": "string"
+			},
+			{
+				"name": "ex4_roll_torque",
+				"type": "string"
+			},
+			{
+				"name": "ex4_RunningRecipe",
+				"type": "string"
+			},
+			{
+				"name": "ex4_screw_current",
+				"type": "string"
+			},
+			{
+				"name": "ex4_screw_speed",
+				"type": "string"
+			},
+			{
+				"name": "ex4_screw_temp",
+				"type": "string"
+			},
+			{
+				"name": "ex4_zone_1_temp",
+				"type": "string"
+			},
+			{
+				"name": "ex4_zone_2_temp",
+				"type": "string"
+			},
+			{
+				"name": "ex4_zone_3_temp",
+				"type": "string"
+			},
+			{
+				"name": "ex5_head_pressure",
+				"type": "string"
+			},
+			{
+				"name": "ex5_head_temp",
+				"type": "string"
+			},
+			{
+				"name": "ex5_melt_temp",
+				"type": "string"
+			},
+			{
+				"name": "ex5_recipe_name",
+				"type": "string"
+			},
+			{
+				"name": "ex5_recipe_no",
+				"type": "string"
+			},
+			{
+				"name": "ex5_RunningRecipe",
+				"type": "string"
+			},
+			{
+				"name": "ex5_screw_current",
+				"type": "string"
+			},
+			{
+				"name": "ex5_screw_speed",
+				"type": "string"
+			},
+			{
+				"name": "ex5_screw_temp",
+				"type": "string"
+			},
+			{
+				"name": "ex5_zone_1_temp",
+				"type": "string"
+			},
+			{
+				"name": "ex5_zone_2_temp",
+				"type": "string"
+			},
+			{
+				"name": "ex5_zone_3_temp",
+				"type": "string"
+			},
+			{
+				"name": "ex5_zone_4_temp",
+				"type": "string"
+			},
+			{
+				"name": "oven_profile_temperature",
+				"type": "string"
+			},
+			{
+				"name": "oven_real_speed",
+				"type": "string"
+			},
+			{
+				"name": "oven_real_temperature1",
+				"type": "string"
+			},
+			{
+				"name": "oven_real_temperature2",
+				"type": "string"
+			},
+			{
+				"name": "oven_speed_set",
+				"type": "string"
+			},
+			{
+				"name": "oven_temp1_set",
+				"type": "string"
+			},
+			{
+				"name": "oven_temp2_set",
+				"type": "string"
+			},
+			{
+				"name": "oven_turbine_status",
+				"type": "string"
+			},
+			{
+				"name": "cal0_CaliperPresent",
+				"type": "string"
+			},
+			{
+				"name": "cal0_DesignValue",
+				"type": "string"
+			},
+			{
+				"name": "cal0_Found",
+				"type": "string"
+			},
+			{
+				"name": "cal0_HighErrorTolerance",
+				"type": "string"
+			},
+			{
+				"name": "cal0_HighWarningTolerance",
+				"type": "string"
+			},
+			{
+				"name": "cal0_LowErrorTolerance",
+				"type": "string"
+			},
+			{
+				"name": "cal0_LowWarningTolerance",
+				"type": "string"
+			},
+			{
+				"name": "cal0_MeasuredValue",
+				"type": "string"
+			},
+			{
+				"name": "cal0_Name",
+				"type": "string"
+			},
+			{
+				"name": "cal0_PriorityCode",
+				"type": "string"
+			},
+			{
+				"name": "cal0_StatusCode",
+				"type": "string"
+			},
+			{
+				"name": "cal1_CaliperPresent",
+				"type": "string"
+			},
+			{
+				"name": "cal1_DesignValue",
+				"type": "string"
+			},
+			{
+				"name": "cal1_Found",
+				"type": "string"
+			},
+			{
+				"name": "cal1_HighErrorTolerance",
+				"type": "string"
+			},
+			{
+				"name": "cal1_HighWarningTolerance",
+				"type": "string"
+			},
+			{
+				"name": "cal1_LowErrorTolerance",
+				"type": "string"
+			},
+			{
+				"name": "cal1_LowWarningTolerance",
+				"type": "string"
+			},
+			{
+				"name": "cal1_MeasuredValue",
+				"type": "string"
+			},
+			{
+				"name": "cal1_Name",
+				"type": "string"
+			},
+			{
+				"name": "cal1_PriorityCode",
+				"type": "string"
+			},
+			{
+				"name": "cal1_StatusCode",
+				"type": "string"
+			},
+			{
+				"name": "cal2_CaliperPresent",
+				"type": "string"
+			},
+			{
+				"name": "cal2_DesignValue",
+				"type": "string"
+			},
+			{
+				"name": "cal2_Found",
+				"type": "string"
+			},
+			{
+				"name": "cal2_HighErrorTolerance",
+				"type": "string"
+			},
+			{
+				"name": "cal2_HighWarningTolerance",
+				"type": "string"
+			},
+			{
+				"name": "cal2_LowErrorTolerance",
+				"type": "string"
+			},
+			{
+				"name": "cal2_LowWarningTolerance",
+				"type": "string"
+			},
+			{
+				"name": "cal2_MeasuredValue",
+				"type": "string"
+			},
+			{
+				"name": "cal2_Name",
+				"type": "string"
+			},
+			{
+				"name": "cal2_PriorityCode",
+				"type": "string"
+			},
+			{
+				"name": "cal2_StatusCode",
+				"type": "string"
+			},
+			{
+				"name": "cal3_CaliperPresent",
+				"type": "string"
+			},
+			{
+				"name": "cal3_DesignValue",
+				"type": "string"
+			},
+			{
+				"name": "cal3_Found",
+				"type": "string"
+			},
+			{
+				"name": "cal3_HighErrorTolerance",
+				"type": "string"
+			},
+			{
+				"name": "cal3_HighWarningTolerance",
+				"type": "string"
+			},
+			{
+				"name": "cal3_LowErrorTolerance",
+				"type": "string"
+			},
+			{
+				"name": "cal3_LowWarningTolerance",
+				"type": "string"
+			},
+			{
+				"name": "cal3_MeasuredValue",
+				"type": "string"
+			},
+			{
+				"name": "cal3_Name",
+				"type": "string"
+			},
+			{
+				"name": "cal3_PriorityCode",
+				"type": "string"
+			},
+			{
+				"name": "cal3_StatusCode",
+				"type": "string"
+			},
+			{
+				"name": "cal4_CaliperPresent",
+				"type": "string"
+			},
+			{
+				"name": "cal4_DesignValue",
+				"type": "string"
+			},
+			{
+				"name": "cal4_Found",
+				"type": "string"
+			},
+			{
+				"name": "cal4_HighErrorTolerance",
+				"type": "string"
+			},
+			{
+				"name": "cal4_HighWarningTolerance",
+				"type": "string"
+			},
+			{
+				"name": "cal4_LowErrorTolerance",
+				"type": "string"
+			},
+			{
+				"name": "cal4_LowWarningTolerance",
+				"type": "string"
+			},
+			{
+				"name": "cal4_MeasuredValue",
+				"type": "string"
+			},
+			{
+				"name": "cal4_Name",
+				"type": "string"
+			},
+			{
+				"name": "cal4_PriorityCode",
+				"type": "string"
+			},
+			{
+				"name": "cal4_StatusCode",
+				"type": "string"
+			},
+			{
+				"name": "cal5_CaliperPresent",
+				"type": "string"
+			},
+			{
+				"name": "cal5_DesignValue",
+				"type": "string"
+			},
+			{
+				"name": "cal5_Found",
+				"type": "string"
+			},
+			{
+				"name": "cal5_HighErrorTolerance",
+				"type": "string"
+			},
+			{
+				"name": "cal5_HighWarningTolerance",
+				"type": "string"
+			},
+			{
+				"name": "cal5_LowErrorTolerance",
+				"type": "string"
+			},
+			{
+				"name": "cal5_LowWarningTolerance",
+				"type": "string"
+			},
+			{
+				"name": "cal5_MeasuredValue",
+				"type": "string"
+			},
+			{
+				"name": "cal5_Name",
+				"type": "string"
+			},
+			{
+				"name": "cal5_PriorityCode",
+				"type": "string"
+			},
+			{
+				"name": "cal5_StatusCode",
+				"type": "string"
+			},
+			{
+				"name": "cal6_CaliperPresent",
+				"type": "string"
+			},
+			{
+				"name": "cal6_DesignValue",
+				"type": "string"
+			},
+			{
+				"name": "cal6_Found",
+				"type": "string"
+			},
+			{
+				"name": "cal6_HighErrorTolerance",
+				"type": "string"
+			},
+			{
+				"name": "cal6_HighWarningTolerance",
+				"type": "string"
+			},
+			{
+				"name": "cal6_LowErrorTolerance",
+				"type": "string"
+			},
+			{
+				"name": "cal6_LowWarningTolerance",
+				"type": "string"
+			},
+			{
+				"name": "cal6_MeasuredValue",
+				"type": "string"
+			},
+			{
+				"name": "cal6_Name",
+				"type": "string"
+			},
+			{
+				"name": "cal6_PriorityCode",
+				"type": "string"
+			},
+			{
+				"name": "cal6_StatusCode",
+				"type": "string"
+			},
+			{
+				"name": "cal7_CaliperPresent",
+				"type": "string"
+			},
+			{
+				"name": "cal7_DesignValue",
+				"type": "string"
+			},
+			{
+				"name": "cal7_Found",
+				"type": "string"
+			},
+			{
+				"name": "cal7_HighErrorTolerance",
+				"type": "string"
+			},
+			{
+				"name": "cal7_HighWarningTolerance",
+				"type": "string"
+			},
+			{
+				"name": "cal7_LowErrorTolerance",
+				"type": "string"
+			},
+			{
+				"name": "cal7_LowWarningTolerance",
+				"type": "string"
+			},
+			{
+				"name": "cal7_MeasuredValue",
+				"type": "string"
+			},
+			{
+				"name": "cal7_Name",
+				"type": "string"
+			},
+			{
+				"name": "cal7_PriorityCode",
+				"type": "string"
+			},
+			{
+				"name": "cal7_StatusCode",
+				"type": "string"
+			},
+			{
+				"name": "cal8_CaliperPresent",
+				"type": "string"
+			},
+			{
+				"name": "cal8_DesignValue",
+				"type": "string"
+			},
+			{
+				"name": "cal8_Found",
+				"type": "string"
+			},
+			{
+				"name": "cal8_HighErrorTolerance",
+				"type": "string"
+			},
+			{
+				"name": "cal8_HighWarningTolerance",
+				"type": "string"
+			},
+			{
+				"name": "cal8_LowErrorTolerance",
+				"type": "string"
+			},
+			{
+				"name": "cal8_LowWarningTolerance",
+				"type": "string"
+			},
+			{
+				"name": "cal8_MeasuredValue",
+				"type": "string"
+			},
+			{
+				"name": "cal8_Name",
+				"type": "string"
+			},
+			{
+				"name": "cal8_PriorityCode",
+				"type": "string"
+			},
+			{
+				"name": "cal8_StatusCode",
+				"type": "string"
+			},
+			{
+				"name": "cal9_CaliperPresent",
+				"type": "string"
+			},
+			{
+				"name": "cal9_DesignValue",
+				"type": "string"
+			},
+			{
+				"name": "cal9_Found",
+				"type": "string"
+			},
+			{
+				"name": "cal9_HighErrorTolerance",
+				"type": "string"
+			},
+			{
+				"name": "cal9_HighWarningTolerance",
+				"type": "string"
+			},
+			{
+				"name": "cal9_LowErrorTolerance",
+				"type": "string"
+			},
+			{
+				"name": "cal9_LowWarningTolerance",
+				"type": "string"
+			},
+			{
+				"name": "cal9_MeasuredValue",
+				"type": "string"
+			},
+			{
+				"name": "cal9_Name",
+				"type": "string"
+			},
+			{
+				"name": "cal9_PriorityCode",
+				"type": "string"
+			},
+			{
+				"name": "cal9_StatusCode",
+				"type": "string"
+			},
+			{
+				"name": "E1_DesignValue",
+				"type": "string"
+			},
+			{
+				"name": "E1_Found",
+				"type": "string"
+			},
+			{
+				"name": "E1_HighErrorTolerance",
+				"type": "string"
+			},
+			{
+				"name": "E1_HighWarningTolerance",
+				"type": "string"
+			},
+			{
+				"name": "E1_LowErrorTolerance",
+				"type": "string"
+			},
+			{
+				"name": "E1_LowWarningTolerance",
+				"type": "string"
+			},
+			{
+				"name": "E1_MeasuredValue",
+				"type": "string"
+			},
+			{
+				"name": "E1_PriorityCode",
+				"type": "string"
+			},
+			{
+				"name": "E1_StatusCode",
+				"type": "string"
+			},
+			{
+				"name": "E2_DesignValue",
+				"type": "string"
+			},
+			{
+				"name": "E2_Found",
+				"type": "string"
+			},
+			{
+				"name": "E2_HighErrorTolerance",
+				"type": "string"
+			},
+			{
+				"name": "E2_HighWarningTolerance",
+				"type": "string"
+			},
+			{
+				"name": "E2_LowErrorTolerance",
+				"type": "string"
+			},
+			{
+				"name": "E2_LowWarningTolerance",
+				"type": "string"
+			},
+			{
+				"name": "E2_MeasuredValue",
+				"type": "string"
+			},
+			{
+				"name": "E2_PriorityCode",
+				"type": "string"
+			},
+			{
+				"name": "E2_StatusCode",
+				"type": "string"
+			},
+			{
+				"name": "E3_DesignValue",
+				"type": "string"
+			},
+			{
+				"name": "E3_Found",
+				"type": "string"
+			},
+			{
+				"name": "E3_HighErrorTolerance",
+				"type": "string"
+			},
+			{
+				"name": "E3_HighWarningTolerance",
+				"type": "string"
+			},
+			{
+				"name": "E3_LowErrorTolerance",
+				"type": "string"
+			},
+			{
+				"name": "E3_LowWarningTolerance",
+				"type": "string"
+			},
+			{
+				"name": "E3_MeasuredValue",
+				"type": "string"
+			},
+			{
+				"name": "E3_PriorityCode",
+				"type": "string"
+			},
+			{
+				"name": "E3_StatusCode",
+				"type": "string"
+			},
+			{
+				"name": "E4_DesignValue",
+				"type": "string"
+			},
+			{
+				"name": "E4_Found",
+				"type": "string"
+			},
+			{
+				"name": "E4_HighErrorTolerance",
+				"type": "string"
+			},
+			{
+				"name": "E4_HighWarningTolerance",
+				"type": "string"
+			},
+			{
+				"name": "E4_LowErrorTolerance",
+				"type": "string"
+			},
+			{
+				"name": "E4_LowWarningTolerance",
+				"type": "string"
+			},
+			{
+				"name": "E4_MeasuredValue",
+				"type": "string"
+			},
+			{
+				"name": "E4_PriorityCode",
+				"type": "string"
+			},
+			{
+				"name": "E4_StatusCode",
+				"type": "string"
+			},
+			{
+				"name": "DataPresent",
+				"type": "string"
+			},
+			{
+				"name": "Design_StatusCode",
+				"type": "string"
+			},
+			{
+				"name": "IOFields_Design_Filename",
+				"type": "string"
+			},
+			{
+				"name": "IOFields_Outputs_Disabled",
+				"type": "string"
+			},
+			{
+				"name": "IOFields_Outputs_Paused",
+				"type": "string"
+			},
+			{
+				"name": "Heartbeat",
+				"type": "string"
+			},
+			{
+				"name": "TSM_GAS-Temperature_1",
+				"type": "string"
+			},
+			{
+				"name": "TSM_GAS-Temperature_2",
+				"type": "string"
+			},
+			{
+				"name": "TSM_GAS-Temperature_3",
+				"type": "string"
+			},
+			{
+				"name": "TSM_GAS-Temperature_4",
+				"type": "string"
+			},
+			{
+				"name": "TSM_UHF_Magnetron1",
+				"type": "string"
+			},
+			{
+				"name": "TSM_UHF_Magnetron2",
+				"type": "string"
+			},
+			{
+				"name": "TSM_UHF_Magnetron3",
+				"type": "string"
+			},
+			{
+				"name": "TSM_UHF_Magnetron4",
+				"type": "string"
+			},
+			{
+				"name": "TSM_UHF_Magnetron5",
+				"type": "string"
+			},
+			{
+				"name": "TSM_UHF_Magnetron6",
+				"type": "string"
+			},
+			{
+				"name": "TSM_GAS_Belt_Real_Speed",
+				"type": "string"
+			},
+			{
+				"name": "TSM_UHF_Belt_Real_Speed",
+				"type": "string"
+			},
+			{
+				"name": "TSM_UHF_Burner_Temperature1",
+				"type": "string"
+			},
+			{
+				"name": "TSM_UHF_Burner_Temperature2",
+				"type": "string"
+			},
+			{
+				"name": "Head_Zone1_temp",
+				"type": "string"
+			},
+			{
+				"name": "Head_Zone2_temp",
+				"type": "string"
+			},
+			{
+				"name": "Head_Zone3_temp",
+				"type": "string"
+			}
+		],
+		"typeProperties": {
+			"table": "WuhanCombined"
+		}
+	}
+}

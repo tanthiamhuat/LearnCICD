@@ -1,0 +1,3123 @@
+{
+	"name": "CopyDataPipeline_Wuhan",
+	"properties": {
+		"activities": [
+			{
+				"name": "Copy_fmu",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [
+					{
+						"name": "Source",
+						"value": "dbo.combined"
+					},
+					{
+						"name": "Destination",
+						"value": "WuhanCombined"
+					}
+				],
+				"typeProperties": {
+					"source": {
+						"type": "AzureSqlSource",
+						"partitionOption": "None"
+					},
+					"sink": {
+						"type": "AzureDataExplorerSink"
+					},
+					"enableStaging": false,
+					"validateDataConsistency": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"name": "1#catepillar_belt_speed",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "catepillar_belt_speed",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "1#catepillar_distance_between_belts",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "catepillar_distance_between_belts",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "1#catepillar_set_point_local",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "catepillar_set_point_local",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "2#HotAir_Zone_5_temperature",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "HotAir_Zone_5_temperature",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "2#HotAir_Zone_6_temperature",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "HotAir_Zone_6_temperature",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "1#HotAir_Zon1_1_temperature",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "HotAir_Zon1_1_temperature",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "1#HotAir_Zon1_2_temperature",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "HotAir_Zon1_2_temperature",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "1#HotAir_Zon1_3_temperature",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "HotAir_Zon1_3_temperature",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "1#HotAir_Zon1_4_temperature",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "HotAir_Zon1_4_temperature",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "1#catepillar_motor_charge",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "catepillar_motor_charge",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "2#HotAir_Zone_1_temperature",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "HotAir_Zone_1_temperature",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "2#HotAir_Zone_2_temperature",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "HotAir_Zone_2_temperature",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "2#HotAir_Zone_3_temperature",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "HotAir_Zone_3_temperature",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "2#HotAir_Zone_4_temperature",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "HotAir_Zone_4_temperature",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "Timestamp",
+									"type": "Int64",
+									"physicalType": "bigint"
+								},
+								"sink": {
+									"name": "Timestamp",
+									"type": "Int64",
+									"physicalType": "long"
+								}
+							},
+							{
+								"source": {
+									"name": "ex1_head_pressure",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "ex1_head_pressure",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "ex1_head_temp",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "ex1_head_temp",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "ex1_melt_temp",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "ex1_melt_temp",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "ex1_recipe_name",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "ex1_recipe_name",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "ex1_recipe_no",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "ex1_recipe_no",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "ex1_roll_torque",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "ex1_roll_torque",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "ex1_RunningRecipe",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "ex1_RunningRecipe",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "ex1_screw_current",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "ex1_screw_current",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "ex1_screw_speed",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "ex1_screw_speed",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "ex1_screw_temp",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "ex1_screw_temp",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "ex1_zone_1_temp",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "ex1_zone_1_temp",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "ex1_zone_2_temp",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "ex1_zone_2_temp",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "ex1_zone_3_temp",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "ex1_zone_3_temp",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "ex2_head_pressure",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "ex2_head_pressure",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "ex2_head_temp",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "ex2_head_temp",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "ex2_melt_temp",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "ex2_melt_temp",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "ex2_recipe_name",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "ex2_recipe_name",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "ex2_recipe_no",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "ex2_recipe_no",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "ex2_roll_torque",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "ex2_roll_torque",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "ex2_RunningRecipe",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "ex2_RunningRecipe",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "ex2_screw_current",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "ex2_screw_current",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "ex2_screw_speed",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "ex2_screw_speed",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "ex2_screw_temp",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "ex2_screw_temp",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "ex2_zone_1_temp",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "ex2_zone_1_temp",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "ex2_zone_2_temp",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "ex2_zone_2_temp",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "ex3_head_pressure",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "ex3_head_pressure",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "ex3_head_temp",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "ex3_head_temp",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "ex3_melt_temp",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "ex3_melt_temp",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "ex3_recipe_name",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "ex3_recipe_name",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "ex3_recipe_no",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "ex3_recipe_no",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "ex3_roll_torque",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "ex3_roll_torque",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "ex3_RunningRecipe",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "ex3_RunningRecipe",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "ex3_screw_current",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "ex3_screw_current",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "ex3_screw_speed",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "ex3_screw_speed",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "ex3_screw_temp",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "ex3_screw_temp",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "ex3_zone_1_temp",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "ex3_zone_1_temp",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "ex3_zone_2_temp",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "ex3_zone_2_temp",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "ex4_head_pressure",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "ex4_head_pressure",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "ex4_head_temp",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "ex4_head_temp",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "ex4_melt_temp",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "ex4_melt_temp",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "ex4_recipe_name",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "ex4_recipe_name",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "ex4_recipe_no",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "ex4_recipe_no",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "ex4_roll_torque",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "ex4_roll_torque",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "ex4_RunningRecipe",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "ex4_RunningRecipe",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "ex4_screw_current",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "ex4_screw_current",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "ex4_screw_speed",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "ex4_screw_speed",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "ex4_screw_temp",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "ex4_screw_temp",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "ex4_zone_1_temp",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "ex4_zone_1_temp",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "ex4_zone_2_temp",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "ex4_zone_2_temp",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "ex4_zone_3_temp",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "ex4_zone_3_temp",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "ex5_head_pressure",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "ex5_head_pressure",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "ex5_head_temp",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "ex5_head_temp",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "ex5_melt_temp",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "ex5_melt_temp",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "ex5_recipe_name",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "ex5_recipe_name",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "ex5_recipe_no",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "ex5_recipe_no",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "ex5_RunningRecipe",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "ex5_RunningRecipe",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "ex5_screw_current",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "ex5_screw_current",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "ex5_screw_speed",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "ex5_screw_speed",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "ex5_screw_temp",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "ex5_screw_temp",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "ex5_zone_1_temp",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "ex5_zone_1_temp",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "ex5_zone_2_temp",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "ex5_zone_2_temp",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "ex5_zone_3_temp",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "ex5_zone_3_temp",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "ex5_zone_4_temp",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "ex5_zone_4_temp",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "oven_profile_temperature",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "oven_profile_temperature",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "oven_real_speed",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "oven_real_speed",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "oven_real_temperature1",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "oven_real_temperature1",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "oven_real_temperature2",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "oven_real_temperature2",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "oven_speed_set",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "oven_speed_set",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "oven_temp1_set",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "oven_temp1_set",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "oven_temp2_set",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "oven_temp2_set",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "oven_turbine_status",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "oven_turbine_status",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "cal0_CaliperPresent",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "cal0_CaliperPresent",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "cal0_DesignValue",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "cal0_DesignValue",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "cal0_Found",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "cal0_Found",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "cal0_HighErrorTolerance",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "cal0_HighErrorTolerance",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "cal0_HighWarningTolerance",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "cal0_HighWarningTolerance",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "cal0_LowErrorTolerance",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "cal0_LowErrorTolerance",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "cal0_LowWarningTolerance",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "cal0_LowWarningTolerance",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "cal0_MeasuredValue",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "cal0_MeasuredValue",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "cal0_Name",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "cal0_Name",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "cal0_PriorityCode",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "cal0_PriorityCode",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "cal0_StatusCode",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "cal0_StatusCode",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "cal1_CaliperPresent",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "cal1_CaliperPresent",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "cal1_DesignValue",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "cal1_DesignValue",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "cal1_Found",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "cal1_Found",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "cal1_HighErrorTolerance",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "cal1_HighErrorTolerance",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "cal1_HighWarningTolerance",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "cal1_HighWarningTolerance",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "cal1_LowErrorTolerance",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "cal1_LowErrorTolerance",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "cal1_LowWarningTolerance",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "cal1_LowWarningTolerance",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "cal1_MeasuredValue",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "cal1_MeasuredValue",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "cal1_Name",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "cal1_Name",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "cal1_PriorityCode",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "cal1_PriorityCode",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "cal1_StatusCode",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "cal1_StatusCode",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "cal2_CaliperPresent",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "cal2_CaliperPresent",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "cal2_DesignValue",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "cal2_DesignValue",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "cal2_Found",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "cal2_Found",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "cal2_HighErrorTolerance",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "cal2_HighErrorTolerance",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "cal2_HighWarningTolerance",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "cal2_HighWarningTolerance",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "cal2_LowErrorTolerance",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "cal2_LowErrorTolerance",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "cal2_LowWarningTolerance",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "cal2_LowWarningTolerance",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "cal2_MeasuredValue",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "cal2_MeasuredValue",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "cal2_Name",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "cal2_Name",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "cal2_PriorityCode",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "cal2_PriorityCode",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "cal2_StatusCode",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "cal2_StatusCode",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "cal3_CaliperPresent",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "cal3_CaliperPresent",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "cal3_DesignValue",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "cal3_DesignValue",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "cal3_Found",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "cal3_Found",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "cal3_HighErrorTolerance",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "cal3_HighErrorTolerance",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "cal3_HighWarningTolerance",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "cal3_HighWarningTolerance",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "cal3_LowErrorTolerance",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "cal3_LowErrorTolerance",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "cal3_LowWarningTolerance",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "cal3_LowWarningTolerance",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "cal3_MeasuredValue",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "cal3_MeasuredValue",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "cal3_Name",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "cal3_Name",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "cal3_PriorityCode",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "cal3_PriorityCode",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "cal3_StatusCode",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "cal3_StatusCode",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "cal4_CaliperPresent",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "cal4_CaliperPresent",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "cal4_DesignValue",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "cal4_DesignValue",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "cal4_Found",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "cal4_Found",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "cal4_HighErrorTolerance",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "cal4_HighErrorTolerance",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "cal4_HighWarningTolerance",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "cal4_HighWarningTolerance",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "cal4_LowErrorTolerance",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "cal4_LowErrorTolerance",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "cal4_LowWarningTolerance",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "cal4_LowWarningTolerance",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "cal4_MeasuredValue",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "cal4_MeasuredValue",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "cal4_Name",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "cal4_Name",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "cal4_PriorityCode",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "cal4_PriorityCode",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "cal4_StatusCode",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "cal4_StatusCode",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "cal5_CaliperPresent",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "cal5_CaliperPresent",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "cal5_DesignValue",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "cal5_DesignValue",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "cal5_Found",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "cal5_Found",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "cal5_HighErrorTolerance",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "cal5_HighErrorTolerance",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "cal5_HighWarningTolerance",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "cal5_HighWarningTolerance",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "cal5_LowErrorTolerance",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "cal5_LowErrorTolerance",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "cal5_LowWarningTolerance",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "cal5_LowWarningTolerance",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "cal5_MeasuredValue",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "cal5_MeasuredValue",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "cal5_Name",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "cal5_Name",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "cal5_PriorityCode",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "cal5_PriorityCode",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "cal5_StatusCode",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "cal5_StatusCode",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "cal6_CaliperPresent",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "cal6_CaliperPresent",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "cal6_DesignValue",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "cal6_DesignValue",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "cal6_Found",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "cal6_Found",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "cal6_HighErrorTolerance",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "cal6_HighErrorTolerance",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "cal6_HighWarningTolerance",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "cal6_HighWarningTolerance",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "cal6_LowErrorTolerance",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "cal6_LowErrorTolerance",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "cal6_LowWarningTolerance",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "cal6_LowWarningTolerance",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "cal6_MeasuredValue",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "cal6_MeasuredValue",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "cal6_Name",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "cal6_Name",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "cal6_PriorityCode",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "cal6_PriorityCode",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "cal6_StatusCode",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "cal6_StatusCode",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "cal7_CaliperPresent",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "cal7_CaliperPresent",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "cal7_DesignValue",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "cal7_DesignValue",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "cal7_Found",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "cal7_Found",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "cal7_HighErrorTolerance",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "cal7_HighErrorTolerance",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "cal7_HighWarningTolerance",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "cal7_HighWarningTolerance",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "cal7_LowErrorTolerance",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "cal7_LowErrorTolerance",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "cal7_LowWarningTolerance",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "cal7_LowWarningTolerance",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "cal7_MeasuredValue",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "cal7_MeasuredValue",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "cal7_Name",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "cal7_Name",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "cal7_PriorityCode",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "cal7_PriorityCode",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "cal7_StatusCode",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "cal7_StatusCode",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "cal8_CaliperPresent",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "cal8_CaliperPresent",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "cal8_DesignValue",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "cal8_DesignValue",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "cal8_Found",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "cal8_Found",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "cal8_HighErrorTolerance",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "cal8_HighErrorTolerance",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "cal8_HighWarningTolerance",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "cal8_HighWarningTolerance",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "cal8_LowErrorTolerance",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "cal8_LowErrorTolerance",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "cal8_LowWarningTolerance",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "cal8_LowWarningTolerance",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "cal8_MeasuredValue",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "cal8_MeasuredValue",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "cal8_Name",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "cal8_Name",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "cal8_PriorityCode",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "cal8_PriorityCode",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "cal8_StatusCode",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "cal8_StatusCode",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "cal9_CaliperPresent",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "cal9_CaliperPresent",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "cal9_DesignValue",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "cal9_DesignValue",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "cal9_Found",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "cal9_Found",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "cal9_HighErrorTolerance",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "cal9_HighErrorTolerance",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "cal9_HighWarningTolerance",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "cal9_HighWarningTolerance",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "cal9_LowErrorTolerance",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "cal9_LowErrorTolerance",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "cal9_LowWarningTolerance",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "cal9_LowWarningTolerance",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "cal9_MeasuredValue",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "cal9_MeasuredValue",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "cal9_Name",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "cal9_Name",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "cal9_PriorityCode",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "cal9_PriorityCode",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "cal9_StatusCode",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "cal9_StatusCode",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "E1_DesignValue",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "E1_DesignValue",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "E1_Found",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "E1_Found",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "E1_HighErrorTolerance",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "E1_HighErrorTolerance",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "E1_HighWarningTolerance",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "E1_HighWarningTolerance",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "E1_LowErrorTolerance",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "E1_LowErrorTolerance",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "E1_LowWarningTolerance",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "E1_LowWarningTolerance",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "E1_MeasuredValue",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "E1_MeasuredValue",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "E1_PriorityCode",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "E1_PriorityCode",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "E1_StatusCode",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "E1_StatusCode",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "E2_DesignValue",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "E2_DesignValue",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "E2_Found",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "E2_Found",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "E2_HighErrorTolerance",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "E2_HighErrorTolerance",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "E2_HighWarningTolerance",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "E2_HighWarningTolerance",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "E2_LowErrorTolerance",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "E2_LowErrorTolerance",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "E2_LowWarningTolerance",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "E2_LowWarningTolerance",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "E2_MeasuredValue",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "E2_MeasuredValue",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "E2_PriorityCode",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "E2_PriorityCode",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "E2_StatusCode",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "E2_StatusCode",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "E3_DesignValue",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "E3_DesignValue",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "E3_Found",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "E3_Found",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "E3_HighErrorTolerance",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "E3_HighErrorTolerance",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "E3_HighWarningTolerance",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "E3_HighWarningTolerance",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "E3_LowErrorTolerance",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "E3_LowErrorTolerance",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "E3_LowWarningTolerance",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "E3_LowWarningTolerance",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "E3_MeasuredValue",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "E3_MeasuredValue",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "E3_PriorityCode",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "E3_PriorityCode",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "E3_StatusCode",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "E3_StatusCode",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "E4_DesignValue",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "E4_DesignValue",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "E4_Found",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "E4_Found",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "E4_HighErrorTolerance",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "E4_HighErrorTolerance",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "E4_HighWarningTolerance",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "E4_HighWarningTolerance",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "E4_LowErrorTolerance",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "E4_LowErrorTolerance",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "E4_LowWarningTolerance",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "E4_LowWarningTolerance",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "E4_MeasuredValue",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "E4_MeasuredValue",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "E4_PriorityCode",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "E4_PriorityCode",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "E4_StatusCode",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "E4_StatusCode",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "DataPresent",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "DataPresent",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "Design_StatusCode",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "Design_StatusCode",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "IOFields_Design_Filename",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "IOFields_Design_Filename",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "IOFields_Outputs_Disabled",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "IOFields_Outputs_Disabled",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "IOFields_Outputs_Paused",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "IOFields_Outputs_Paused",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "Heartbeat",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "Heartbeat",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "TSM_GAS-Temperature_1",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "TSM_GAS-Temperature_1",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "TSM_GAS-Temperature_2",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "TSM_GAS-Temperature_2",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "TSM_GAS-Temperature_3",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "TSM_GAS-Temperature_3",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "TSM_GAS-Temperature_4",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "TSM_GAS-Temperature_4",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "TSM_UHF_Magnetron1",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "TSM_UHF_Magnetron1",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "TSM_UHF_Magnetron2",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "TSM_UHF_Magnetron2",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "TSM_UHF_Magnetron3",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "TSM_UHF_Magnetron3",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "TSM_UHF_Magnetron4",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "TSM_UHF_Magnetron4",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "TSM_UHF_Magnetron5",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "TSM_UHF_Magnetron5",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "TSM_UHF_Magnetron6",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "TSM_UHF_Magnetron6",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "TSM_GAS_Belt_Real_Speed",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "TSM_GAS_Belt_Real_Speed",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "TSM_UHF_Belt_Real_Speed",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "TSM_UHF_Belt_Real_Speed",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "TSM_UHF_Burner_Temperature1",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "TSM_UHF_Burner_Temperature1",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "TSM_UHF_Burner_Temperature2",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "TSM_UHF_Burner_Temperature2",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "Head_Zone1_temp",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "Head_Zone1_temp",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "Head_Zone2_temp",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "Head_Zone2_temp",
+									"type": "String",
+									"physicalType": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "Head_Zone3_temp",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "Head_Zone3_temp",
+									"type": "String",
+									"physicalType": "string"
+								}
+							}
+						],
+						"typeConversion": true,
+						"typeConversionSettings": {
+							"allowDataTruncation": true,
+							"treatBooleanAsNumber": false
+						}
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "SourceDataset_fmu",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "DestinationDataset_fmu",
+						"type": "DatasetReference"
+					}
+				]
+			}
+		],
+		"annotations": []
+	}
+}
