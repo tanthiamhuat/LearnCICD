@@ -17,7 +17,17 @@
 				"typeProperties": {
 					"dataflow": {
 						"referenceName": "dataflow1",
-						"type": "DataFlowReference"
+						"type": "DataFlowReference",
+						"parameters": {
+							"start": {
+								"value": "'@{pipeline().parameters.start_pipe}'",
+								"type": "Expression"
+							},
+							"end": {
+								"value": "'@{pipeline().parameters.end_pipe}'",
+								"type": "Expression"
+							}
+						}
 					},
 					"compute": {
 						"coreCount": 8,
@@ -27,6 +37,14 @@
 				}
 			}
 		],
+		"parameters": {
+			"start_pipe": {
+				"type": "string"
+			},
+			"end_pipe": {
+				"type": "string"
+			}
+		},
 		"annotations": []
 	}
 }
