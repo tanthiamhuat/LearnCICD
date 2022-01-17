@@ -3118,6 +3118,14 @@
 				]
 			}
 		],
+		"parameters": {
+			"start_pipe": {
+				"type": "string"
+			},
+			"end_pipe": {
+				"type": "string"
+			}
+		},
 		"annotations": []
 	}
 }
