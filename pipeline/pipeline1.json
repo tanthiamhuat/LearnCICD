@@ -45,9 +45,9 @@
 									"physicalType": "String"
 								},
 								"sink": {
+									"name": "device_id",
 									"type": "String",
-									"physicalType": "String",
-									"ordinal": 1
+									"physicalType": "String"
 								}
 							},
 							{
@@ -57,9 +57,9 @@
 									"physicalType": "String"
 								},
 								"sink": {
+									"name": "name",
 									"type": "String",
-									"physicalType": "String",
-									"ordinal": 2
+									"physicalType": "String"
 								}
 							},
 							{
@@ -69,9 +69,9 @@
 									"physicalType": "String"
 								},
 								"sink": {
+									"name": "latitude",
 									"type": "String",
-									"physicalType": "String",
-									"ordinal": 3
+									"physicalType": "String"
 								}
 							},
 							{
@@ -81,9 +81,9 @@
 									"physicalType": "String"
 								},
 								"sink": {
+									"name": "longitude",
 									"type": "String",
-									"physicalType": "String",
-									"ordinal": 4
+									"physicalType": "String"
 								}
 							},
 							{
@@ -93,9 +93,9 @@
 									"physicalType": "String"
 								},
 								"sink": {
+									"name": "Rainfall",
 									"type": "String",
-									"physicalType": "String",
-									"ordinal": 5
+									"physicalType": "String"
 								}
 							},
 							{
@@ -105,9 +105,9 @@
 									"physicalType": "String"
 								},
 								"sink": {
+									"name": "DateTime",
 									"type": "String",
-									"physicalType": "String",
-									"ordinal": 6
+									"physicalType": "String"
 								}
 							}
 						],
