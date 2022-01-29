@@ -3,7 +3,7 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "Copy data1",
+				"name": "Copy RainFall data from Azure to Amazon",
 				"type": "Copy",
 				"dependsOn": [],
 				"policy": {
