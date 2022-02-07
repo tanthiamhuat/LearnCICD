@@ -10,9 +10,8 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"fileName": "RainfallSingapore_2019-01-01.csv",
-				"folderPath": "Rainfall",
-				"fileSystem": "weathersingapore"
+				"fileName": "test.csv",
+				"fileSystem": "wuhancombined"
 			},
 			"columnDelimiter": ",",
 			"escapeChar": "\\",
