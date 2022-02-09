@@ -17,7 +17,11 @@
 				"typeProperties": {
 					"dataflow": {
 						"referenceName": "dataflow1",
-						"type": "DataFlowReference"
+						"type": "DataFlowReference",
+						"parameters": {
+							"DateTimeStart": "toDate(\"2022-02-01\")",
+							"DateTimeEnd": "toDate(\"2022-02-05\")"
+						}
 					},
 					"compute": {
 						"coreCount": 8,
