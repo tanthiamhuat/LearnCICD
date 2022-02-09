@@ -19,8 +19,8 @@
 						"referenceName": "dataflow1",
 						"type": "DataFlowReference",
 						"parameters": {
-							"DateTimeStart": "toDate(\"2022-02-01\")",
-							"DateTimeEnd": "toDate(\"2022-02-05\")"
+							"DateTimeStart": "toString('2021-12-07 00:00:00')",
+							"DateTimeEnd": "toString('2021-12-07 23:59:59')"
 						}
 					},
 					"compute": {
