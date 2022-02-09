@@ -1,6 +1,61 @@
 {
 	"name": "DateRangeArray",
 	"properties": {
-		"annotations": []
-	}
+		"activities": [
+			{
+				"name": "Create date range",
+				"type": "ForEach",
+				"dependsOn": [],
+				"userProperties": [],
+				"typeProperties": {
+					"items": {
+						"value": "@range(0, pipeline().parameters.daysToGet)",
+						"type": "Expression"
+					},
+					"isSequential": true,
+					"activities": [
+						{
+							"name": "Append date",
+							"type": "AppendVariable",
+							"dependsOn": [],
+							"userProperties": [],
+							"typeProperties": {
+								"variableName": "daysRange",
+								"value": {
+									"value": "@addDays(\n    pipeline().parameters.startDate, \n    mul(\n        item(),\n        if(\n            equals(pipeline().parameters.timeDirection, '-'),\n            -1,\n            1\n        )\n    )\n)",
+									"type": "Expression"
+								}
+							}
+						}
+					]
+				}
+			}
+		],
+		"parameters": {
+			"startDate": {
+				"type": "string",
+				"defaultValue": "2021-03-01T00:00:00Z"
+			},
+			"daysToGet": {
+				"type": "int",
+				"defaultValue": 7
+			},
+			"timeDirection": {
+				"type": "string",
+				"defaultValue": "-"
+			}
+		},
+		"variables": {
+			"daysRange": {
+				"type": "Array",
+				"defaultValue": []
+			}
+		},
+		"folder": {
+			"name": "tests"
+		},
+		"annotations": [],
+		"lastPublishTime": "2021-03-17T11:28:57Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
 }
