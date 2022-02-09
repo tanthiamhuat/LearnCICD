@@ -29,6 +29,26 @@
 						}
 					]
 				}
+			},
+			{
+				"name": "For Each Day in Array",
+				"type": "ForEach",
+				"dependsOn": [
+					{
+						"activity": "Create date range",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"userProperties": [],
+				"typeProperties": {
+					"items": {
+						"value": "@variables('daysRange')",
+						"type": "Expression"
+					},
+					"isSequential": true
+				}
 			}
 		],
 		"parameters": {
