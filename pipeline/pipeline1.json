@@ -16,11 +16,12 @@
 				"userProperties": [],
 				"typeProperties": {
 					"dataflow": {
-						"referenceName": "dataflow1",
+						"referenceName": "dataflow3",
 						"type": "DataFlowReference",
 						"parameters": {
-							"DateTimeStart": "'2021-12-07 00:00:00'",
-							"DateTimeEnd": "'2021-12-07 23:59:59'"
+							"tableName": "'dbo.combined'",
+							"DateTimeStart": "toDate('2022-01-01')",
+							"DateTimeEnd": "toDate('2022-01-02')"
 						}
 					},
 					"compute": {
