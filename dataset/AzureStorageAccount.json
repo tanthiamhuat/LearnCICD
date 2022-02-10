@@ -20,27 +20,47 @@
 		},
 		"schema": [
 			{
-				"name": "device_id",
-				"type": "String"
-			},
-			{
-				"name": "name",
-				"type": "String"
-			},
-			{
-				"name": "latitude",
-				"type": "String"
-			},
-			{
-				"name": "longitude",
-				"type": "String"
-			},
-			{
-				"name": "Rainfall",
-				"type": "String"
-			},
-			{
 				"name": "DateTime",
+				"type": "String"
+			},
+			{
+				"name": "ex2_head_temp",
+				"type": "String"
+			},
+			{
+				"name": "ex3_head_temp",
+				"type": "String"
+			},
+			{
+				"name": "ex4_head_temp",
+				"type": "String"
+			},
+			{
+				"name": "ex2_head_pressure",
+				"type": "String"
+			},
+			{
+				"name": "ex3_head_pressure",
+				"type": "String"
+			},
+			{
+				"name": "ex4_head_pressure",
+				"type": "String"
+			},
+			{
+				"name": "Head_Zone1_temp",
+				"type": "String"
+			},
+			{
+				"name": "Head_Zone2_temp",
+				"type": "String"
+			},
+			{
+				"name": "Head_Zone3_temp",
+				"type": "String"
+			},
+			{
+				"name": "IOFields_Design_Filename",
 				"type": "String"
 			}
 		]
