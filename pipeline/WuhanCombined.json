@@ -16,7 +16,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"dataflow": {
-						"referenceName": "dataflow_WuhanCombined",
+						"referenceName": "dataflow_WuhanCombined_Table",
 						"type": "DataFlowReference",
 						"parameters": {
 							"tableName": "'dbo.combined'",
