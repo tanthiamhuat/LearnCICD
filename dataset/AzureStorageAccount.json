@@ -16,7 +16,10 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"fileName": "test.csv",
+				"fileName": {
+					"value": "@dataset().TargetName",
+					"type": "Expression"
+				},
 				"fileSystem": "wuhancombined"
 			},
 			"columnDelimiter": ",",
