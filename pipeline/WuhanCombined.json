@@ -26,6 +26,11 @@
 								"value": "'@{concat(pipeline().Pipeline,'.csv','')}'",
 								"type": "Expression"
 							}
+						},
+						"datasetParameters": {
+							"sink1": {
+								"TargetName": "WuhanCombined"
+							}
 						}
 					},
 					"compute": {
