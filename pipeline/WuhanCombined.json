@@ -1,5 +1,5 @@
 {
-	"name": "pipeline1",
+	"name": "WuhanCombined",
 	"properties": {
 		"activities": [
 			{
@@ -20,8 +20,12 @@
 						"type": "DataFlowReference",
 						"parameters": {
 							"tableName": "'dbo.combined'",
-							"DateTimeStart": "toDate('2022-01-01')",
-							"DateTimeEnd": "toDate('2022-01-02')"
+							"DateTimeStart": "toDate('2021-12-07')",
+							"DateTimeEnd": "toDate('2021-12-08')",
+							"fileName": {
+								"value": "'@{concat(pipeline().Pipeline,'.csv','')}'",
+								"type": "Expression"
+							}
 						}
 					},
 					"compute": {

@@ -5,6 +5,11 @@
 			"referenceName": "AzureDataLakeStorageGen2_LinkedService",
 			"type": "LinkedServiceReference"
 		},
+		"parameters": {
+			"TargetName": {
+				"type": "string"
+			}
+		},
 		"annotations": [],
 		"type": "DelimitedText",
 		"typeProperties": {
