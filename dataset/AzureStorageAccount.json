@@ -21,7 +21,7 @@
 					"type": "Expression"
 				},
 				"folderPath": {
-					"value": "substring(utcNow(),0,10)",
+					"value": "@substring(utcNow(),0,10)",
 					"type": "Expression"
 				},
 				"fileSystem": "wuhancombined"
