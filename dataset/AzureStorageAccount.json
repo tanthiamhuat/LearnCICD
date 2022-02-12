@@ -17,7 +17,11 @@
 			"location": {
 				"type": "AzureBlobFSLocation",
 				"fileName": {
-					"value": "@dataset().TargetName",
+					"value": "test.csv",
+					"type": "Expression"
+				},
+				"folderPath": {
+					"value": "substring(utcNow(),0,10)",
 					"type": "Expression"
 				},
 				"fileSystem": "wuhancombined"
