@@ -1,0 +1,20 @@
+{
+	"name": "StorageAccountParquet",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureDataLakeStorageGen2_LinkedService",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"folderPath": "Raw/FuelWatch",
+				"fileSystem": "datalakestore"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": []
+	}
+}

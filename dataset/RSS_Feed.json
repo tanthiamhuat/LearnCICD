@@ -1,0 +1,16 @@
+{
+	"name": "RSS_Feed",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "RSS_LinkedService",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Xml",
+		"typeProperties": {
+			"location": {
+				"type": "HttpServerLocation"
+			}
+		}
+	}
+}
