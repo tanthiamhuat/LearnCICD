@@ -12,10 +12,10 @@
 				"type": "AzureBlobFSLocation",
 				"fileName": "feed.parquet",
 				"folderPath": {
-					"value": "@concat('Raw/FuelWatch',utcNow())",
+					"value": "substring(utcNow(),0,9)",
 					"type": "Expression"
 				},
-				"fileSystem": "datalakestore"
+				"fileSystem": "datalakestore/Raw/FuelWatch"
 			},
 			"compressionCodec": "snappy"
 		},
