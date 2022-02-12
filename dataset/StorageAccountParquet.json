@@ -10,12 +10,12 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"fileName": "feed.parquet",
-				"folderPath": {
-					"value": "toString(substring(utcNow(),0,9))",
+				"fileName": {
+					"value": "concat(substring(utcNow(),0,9),'feed.parquet')",
 					"type": "Expression"
 				},
-				"fileSystem": "datalakestore/Raw/FuelWatch"
+				"folderPath": "Raw/FuelWatch",
+				"fileSystem": "datalakestore"
 			},
 			"compressionCodec": "snappy"
 		},
