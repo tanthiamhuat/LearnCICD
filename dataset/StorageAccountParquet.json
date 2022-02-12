@@ -5,22 +5,16 @@
 			"referenceName": "AzureDataLakeStorageGen2_LinkedService",
 			"type": "LinkedServiceReference"
 		},
-		"parameters": {
-			"Date": {
-				"type": "string",
-				"defaultValue": "substring(utcNow(),0,9)"
-			}
-		},
 		"annotations": [],
 		"type": "Parquet",
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"fileName": {
-					"value": "@concat(dataset().Date,'feed.parquet')",
+				"fileName": "feed.parquet",
+				"folderPath": {
+					"value": "@concat('Raw/FuelWatch','2022-02-12')",
 					"type": "Expression"
 				},
-				"folderPath": "Raw/FuelWatch",
 				"fileSystem": "datalakestore"
 			},
 			"compressionCodec": "snappy"
