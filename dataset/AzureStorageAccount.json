@@ -16,7 +16,6 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"fileName": "part-00000-tid-707076243262744141-77ada995-617b-4d4d-aea4-ef18d7000247-1-1-c000.csv",
 				"folderPath": {
 					"value": "@substring(utcNow(),0,10)",
 					"type": "Expression"
