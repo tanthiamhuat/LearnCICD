@@ -119,9 +119,45 @@
 							"userProperties": [],
 							"typeProperties": {
 								"expression": {
-									"value": "@greaterOrEquals(activity(‘GetFileSize’).output.size,1024000) ",
+									"value": "@greaterOrEquals(activity('GetFileSize').output.size,1024000) ",
 									"type": "Expression"
 								},
+								"ifFalseActivities": [
+									{
+										"name": "DeleteSmallFiles",
+										"type": "Delete",
+										"dependsOn": [],
+										"policy": {
+											"timeout": "7.00:00:00",
+											"retry": 0,
+											"retryIntervalInSeconds": 30,
+											"secureOutput": false,
+											"secureInput": false
+										},
+										"userProperties": [],
+										"typeProperties": {
+											"dataset": {
+												"referenceName": "DelimitedText",
+												"type": "DatasetReference",
+												"parameters": {
+													"filename": "@item().name"
+												}
+											},
+											"logStorageSettings": {
+												"linkedServiceName": {
+													"referenceName": "AzureDataLakeStorageGen2_LinkedService",
+													"type": "LinkedServiceReference"
+												}
+											},
+											"enableLogging": true,
+											"storeSettings": {
+												"type": "AzureBlobFSReadSettings",
+												"recursive": true,
+												"enablePartitionDiscovery": false
+											}
+										}
+									}
+								],
 								"ifTrueActivities": [
 									{
 										"name": "CopyFromStoragetoSQLServer",
