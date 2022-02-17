@@ -104,6 +104,19 @@
 									"type": "DelimitedTextReadSettings"
 								}
 							}
+						},
+						{
+							"name": "If Condition_CheckSize",
+							"type": "IfCondition",
+							"dependsOn": [
+								{
+									"activity": "Get FileSize",
+									"dependencyConditions": [
+										"Succeeded"
+									]
+								}
+							],
+							"userProperties": []
 						}
 					]
 				}
