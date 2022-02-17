@@ -30,6 +30,29 @@
 						"type": "DelimitedTextReadSettings"
 					}
 				}
+			},
+			{
+				"name": "FileInput",
+				"type": "Filter",
+				"dependsOn": [
+					{
+						"activity": "getListofFiles",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"userProperties": [],
+				"typeProperties": {
+					"items": {
+						"value": "@activity('getListofFiles').output.childItems ",
+						"type": "Expression"
+					},
+					"condition": {
+						"value": "@endswith(item().name,’csv’) ",
+						"type": "Expression"
+					}
+				}
 			}
 		],
 		"annotations": []
