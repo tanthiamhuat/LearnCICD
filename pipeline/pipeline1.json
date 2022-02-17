@@ -84,6 +84,7 @@
 								"secureOutput": false,
 								"secureInput": false
 							},
+							"userProperties": [],
 							"typeProperties": {
 								"dataset": {
 									"referenceName": "DelimitedText",
