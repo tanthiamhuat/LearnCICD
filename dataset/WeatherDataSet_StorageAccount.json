@@ -10,10 +10,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"fileName": {
-					"value": "*",
-					"type": "Expression"
-				},
+				"fileName": "RainfallSingapore_2019-02-09.csv",
 				"folderPath": "Rainfall",
 				"fileSystem": "weathersingapore"
 			},
