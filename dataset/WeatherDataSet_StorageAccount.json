@@ -1,5 +1,5 @@
 {
-	"name": "WeatherDataSet",
+	"name": "WeatherDataSet_StorageAccount",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "AzureDataLakeStorageGen2_LinkedService",
