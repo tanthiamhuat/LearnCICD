@@ -53,6 +53,26 @@
 						"type": "Expression"
 					}
 				}
+			},
+			{
+				"name": "ForEachCSV",
+				"type": "ForEach",
+				"dependsOn": [
+					{
+						"activity": "FileInput",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"userProperties": [],
+				"typeProperties": {
+					"items": {
+						"value": "@activity('FileInput').output.Value",
+						"type": "Expression"
+					},
+					"isSequential": true
+				}
 			}
 		],
 		"annotations": []
