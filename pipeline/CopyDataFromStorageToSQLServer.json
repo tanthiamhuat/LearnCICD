@@ -227,9 +227,7 @@
 														"sink": {
 															"name": "latitude",
 															"type": "Decimal",
-															"physicalType": "decimal",
-															"scale": 0,
-															"precision": 18
+															"physicalType": "decimal"
 														}
 													},
 													{
@@ -241,9 +239,7 @@
 														"sink": {
 															"name": "longitude",
 															"type": "Decimal",
-															"physicalType": "decimal",
-															"scale": 0,
-															"precision": 18
+															"physicalType": "decimal"
 														}
 													},
 													{
@@ -255,9 +251,7 @@
 														"sink": {
 															"name": "Rainfall",
 															"type": "Decimal",
-															"physicalType": "decimal",
-															"scale": 0,
-															"precision": 18
+															"physicalType": "decimal"
 														}
 													},
 													{
