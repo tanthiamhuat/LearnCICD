@@ -16,8 +16,11 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"fileName": "@dataset().filename",
-				"folderPath": "Rainfall",
+				"fileName": {
+					"value": "@dataset().filename",
+					"type": "Expression"
+				},
+				"folderPath": "Rainfall/test",
 				"fileSystem": "weathersingapore"
 			},
 			"columnDelimiter": ",",
