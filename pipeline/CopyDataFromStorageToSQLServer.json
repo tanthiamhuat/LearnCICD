@@ -267,8 +267,7 @@
 															"physicalType": "String"
 														},
 														"sink": {
-															"name": "DateTime1",
-															"type": "DateTime",
+															"name": "DateTime",
 															"physicalType": "datetime"
 														}
 													}
