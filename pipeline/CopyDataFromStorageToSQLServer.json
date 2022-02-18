@@ -285,7 +285,10 @@
 												"referenceName": "DelimitedText",
 												"type": "DatasetReference",
 												"parameters": {
-													"filename": "csv"
+													"filename": {
+														"value": "@item().name",
+														"type": "Expression"
+													}
 												}
 											}
 										],
