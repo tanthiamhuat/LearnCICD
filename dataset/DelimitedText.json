@@ -7,8 +7,7 @@
 		},
 		"parameters": {
 			"filename": {
-				"type": "string",
-				"defaultValue": "csv"
+				"type": "string"
 			}
 		},
 		"annotations": [],
@@ -27,6 +26,25 @@
 			"escapeChar": "\\",
 			"quoteChar": "\""
 		},
-		"schema": []
+		"schema": [
+			{
+				"type": "String"
+			},
+			{
+				"type": "String"
+			},
+			{
+				"type": "String"
+			},
+			{
+				"type": "String"
+			},
+			{
+				"type": "String"
+			},
+			{
+				"type": "String"
+			}
+		]
 	}
 }
