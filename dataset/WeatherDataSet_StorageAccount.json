@@ -10,7 +10,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"folderPath": "Rainfall",
+				"folderPath": "Rainfall/test",
 				"fileSystem": "weathersingapore"
 			},
 			"columnDelimiter": ",",
