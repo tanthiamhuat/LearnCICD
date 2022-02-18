@@ -282,8 +282,11 @@
 										},
 										"inputs": [
 											{
-												"referenceName": "WeatherDataSet_StorageAccount",
-												"type": "DatasetReference"
+												"referenceName": "DelimitedText",
+												"type": "DatasetReference",
+												"parameters": {
+													"filename": "csv"
+												}
 											}
 										],
 										"outputs": [
